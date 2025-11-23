@@ -1,0 +1,23 @@
+# İşletim sistemi çöpleri
+.DS_Store
+Thumbs.db
+
+# Node.js gereksizleri
+node_modules/
+npm-debug.log
+
+# Python gereksizleri
+__pycache__/
+*.py[cod]
+venv/
+
+# Terraform (DevOps Sırları)
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# Çevresel Değişkenler (Şifreler buradadır!)
+.env
+*.pem
