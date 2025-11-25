@@ -42,7 +42,9 @@ https://medium.com/@btn.sait/dayan%C4%B1kl%C4%B1-bir-%C3%A7oklu-bulut-e-ticaret-
 ```bash
 terraform destroy
 ```
+
 <img width="2514" height="1691" alt="image" src="https://github.com/user-attachments/assets/5617558e-338c-444a-a8e3-037a49041d7f" />
+
 
 
 
