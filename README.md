@@ -1,6 +1,8 @@
 # 🌍 Multi-Cloud Global E-Commerce Platform (Terraform, AWS & GCP)
 
 Bu proje, yüksek erişilebilirlik ve sıfır kesinti hedefiyle, bir e-ticaret uygulamasının altyapısını **AWS, GCP ve Cloudflare** kullanarak uçtan uca otomatize edilmiş bir Multi-Cloud mimarisiyle kurmayı amaçlar. Tüm altyapı, maliyet ve güvenlik optimizasyonları gözetilerek **Infrastructure as Code (IaC)** prensibiyle Terraform ile yönetilmiştir.
+Projenin çalışma prensibi için medium yazısını da inceleyebilirsiniz.
+https://medium.com/@btn.sait/dayan%C4%B1kl%C4%B1-bir-%C3%A7oklu-bulut-e-ticaret-platformu-kurulumu-aws-gcp-ve-cloudflare%C4%B1n-g%C3%BC%C3%A7lerini-6284e241ee0d?postPublishedType=repub
 
 <img width="1262" height="1013" alt="image" src="https://github.com/user-attachments/assets/f385d3be-da01-45bc-859c-13d08e0e487c" />
 
@@ -13,7 +15,7 @@ Bu proje, yüksek erişilebilirlik ve sıfır kesinti hedefiyle, bir e-ticaret u
 | **Bulut Sağlayıcıları** | **GCP** (Cloud Run, VPC, Cloud SQL) | Hızlı ve ölçeklenebilir Containerized Frontend hizmeti. |
 | **Trafik Yönetimi** | **Cloudflare** | Global Load Balancing, Geo-Routing ve SSL/CDN yönetimi. |
 | **Veritabanı** | **AWS RDS (PostgreSQL)** | Persistent (Kalıcı) veri katmanı. VPC içi güvenli erişim. |
-| **Konteyner** | **Docker ** | Uygulamaların paketlenmesi için. |
+| **Konteyner** | **Docker** | Uygulamaların paketlenmesi için. |
 
 ## ⚙️ Kurulum ve Çalıştırma (Deployment Steps)
 
@@ -39,8 +41,10 @@ Bu proje, yüksek erişilebilirlik ve sıfır kesinti hedefiyle, bir e-ticaret u
 
 ```bash
 terraform destroy
-
+```
 <img width="2514" height="1691" alt="image" src="https://github.com/user-attachments/assets/5617558e-338c-444a-a8e3-037a49041d7f" />
+
+
 
 
 
