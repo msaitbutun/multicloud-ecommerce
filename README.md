@@ -13,5 +13,31 @@ Bu proje, yüksek erişilebilirlik ve sıfır kesinti hedefiyle, bir e-ticaret u
 | **Bulut Sağlayıcıları** | **GCP** (Cloud Run, VPC, Cloud SQL) | Hızlı ve ölçeklenebilir Containerized Frontend hizmeti. |
 | **Trafik Yönetimi** | **Cloudflare** | Global Load Balancing, Geo-Routing ve SSL/CDN yönetimi. |
 | **Veritabanı** | **AWS RDS (PostgreSQL)** | Persistent (Kalıcı) veri katmanı. VPC içi güvenli erişim. |
-| **Konteyner** | **Docker * | Uygulamaların paketlenmesi için. |
+| **Konteyner** | **Docker ** | Uygulamaların paketlenmesi için. |
+
+## ⚙️ Kurulum ve Çalıştırma (Deployment Steps)
+
+1.  **Kimlik Doğrulama:** AWS ve GCP API Key/Service Account'lar için ilgili ortam değişkenlerini ayarlayın.
+2.  **Terraform Init:** `terraform init -backend-config="bucket=..."` ile Remote State'i başlatın.
+3.  **Plan & Apply:** Kurulumu gözden geçirin ve uygulayın.
+    ```bash
+    terraform plan
+    terraform apply
+    ```
+    *(NOT: Tüm kaynaklar, olası maliyet artışını önlemek için en düşük konfigürasyonda kurulmuştur.)*
+4.  **Uygulama Dağıtımı:** Backend (Lambda) ve Frontend (Cloud Run) kodlarını ilgili bulut servislerine deploy edin, frontend klasöründe bulunan dockerfile ile imajı gcp'ye atın.
+    *(NOT: Dockeri gcloud için yetkilendirmelisiniz.)*
+     ```bash
+        gcloud auth configure-docker
+    ```
+6.  **Cloudflare Entegrasyonu:** Terraform çıktısındaki AWS/GCP Load Balancer IP'lerini Cloudflare DNS'ine girin.
+
+
+## 🗑️ Kaynakları Kaldırma
+
+Çalışmayı bitirdiğinizde veya maliyetleri önlemek için tüm kaynakları tek komutla kapatın:
+
+```bash
+terraform destroy
+
 
